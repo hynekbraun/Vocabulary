@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/rounded_shape"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_rv_texts"
+        android:layout_width="288dp"
+        android:layout_height="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_rv_delete"
+        app:layout_constraintTop_toTopOf="@+id/iv_rv_delete">
+
+        <TextView
+            android:id="@+id/tv_rv_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            tools:text="There is the word" />
+
+        <TextView
+            android:id="@+id/tv_rv_translation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            tools:text="there is the translation" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_rv_notes"
+        android:layout_width="290dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/note_text"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_rv_update"
+        app:layout_constraintEnd_toEndOf="@+id/ll_rv_texts"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ll_rv_texts"
+        app:layout_constraintTop_toBottomOf="@id/ll_rv_texts"
+        tools:text="This is where the notes will be" />
+
+    <ImageView
+        android:id="@+id/iv_rv_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_rv_update"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_create"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_rv_delete"
+        app:layout_constraintTop_toBottomOf="@id/iv_rv_delete" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
