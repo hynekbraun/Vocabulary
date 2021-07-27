@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     android:orientation="vertical">
 
     <Button
         android:id="@+id/btn_to_practise"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to practise" />
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/practise_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -16,18 +25,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_to_practise"
-        android:layout_marginTop="20dp" />
-
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_to_practise" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_word"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="50dp"
-        android:src="@drawable/ic_add"
-        android:visibility="visible" />
+        android:src="@drawable/ic_add_2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="70dp"
+        tools:ignore="ContentDescription" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
