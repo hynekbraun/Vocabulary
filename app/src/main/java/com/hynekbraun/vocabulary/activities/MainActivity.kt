@@ -2,6 +2,8 @@ package com.hynekbraun.vocabulary.activities
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -146,4 +148,5 @@ class MainActivity : AppCompatActivity() {
         builder.setMessage("Are you sure you want to delete ${currentWord.word}?")
         builder.create().show()
     }
+
 }
