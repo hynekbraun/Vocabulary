@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.dialog_add_word.*
 import kotlinx.android.synthetic.main.dialog_update_word.*
 
 class MainActivity : AppCompatActivity() {
+    /asdasdasd
 
     private lateinit var viewModel: WordsViewModel
 
